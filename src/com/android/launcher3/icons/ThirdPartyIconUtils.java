@@ -10,6 +10,7 @@ import com.android.launcher3.icons.clock.CustomClock;
 import com.android.launcher3.icons.clock.DynamicClock;
 import com.android.launcher3.icons.pack.IconPackManager;
 import com.android.launcher3.icons.pack.IconResolver;
+import com.android.launcher3.util.Themes;
 
 class ThirdPartyIconUtils {
     static Drawable getByKey(Context context, ComponentKey key, int iconDpi,
@@ -24,12 +25,14 @@ class ThirdPartyIconUtils {
             return CustomClock.getClock(context, icon, resolver.clockData());
         }
 
-        // Google Clock goes second, but only if the icon pack does not override it.
-        if (icon == null && key.componentName.equals(DynamicClock.DESK_CLOCK)) {
-            String packageName = key.componentName.getPackageName();
-            IconProvider.ThemeData td = IconProvider.INSTANCE.get(context)
-                    .getThemeDataForPackage(packageName);
-            return ClockDrawableWrapper.forPackage(context, packageName, iconDpi, td);
+            // Google Clock goes second, but only if the icon pack does not override it.
+            if (icon == null && key.componentName.equals(DynamicClock.DESK_CLOCK)) {
+                String packageName = key.componentName.getPackageName();
+                String themedIconPack = Themes.getThemedIconPack(context);
+                IconProvider.ThemeData td = IconProvider.INSTANCE.get(context)
+                        .getThemeDataForPackage(packageName, themedIconPack);
+                return ClockDrawableWrapper.forPackage(context, packageName, iconDpi, td);
+            }
         }
 
         // Google Calendar is checked last. Only applied if the icon pack does not override it.
