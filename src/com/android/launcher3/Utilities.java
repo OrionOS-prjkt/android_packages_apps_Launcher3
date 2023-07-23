@@ -1095,7 +1095,7 @@ public final class Utilities {
     }
 
     public static boolean enableMonoChromeThemedIcons(Context context) {
-    	SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
-    	return prefs.getBoolean(KEY_FORCE_MONOCHROME_ICONS, false);
-   }
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_FORCE_MONOCHROME_ICONS, false);
+    }
 }
