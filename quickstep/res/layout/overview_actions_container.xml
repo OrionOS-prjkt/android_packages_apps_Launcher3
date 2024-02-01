@@ -29,9 +29,9 @@
     <LinearLayout
         android:id="@+id/clear_all_container"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/overview_clear_all_container_height"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/overview_clear_all_container_margin_bottom"
         android:orientation="horizontal">
 
         <Space
@@ -43,7 +43,7 @@
             android:id="@+id/action_clear_all"
             style="@style/OverviewActionButton"
             android:layout_width="150dp"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/overview_clear_all_container_height"
             android:text="@string/recents_clear_all_title"
             android:textColor="?android:attr/colorAccent"
             android:foregroundGravity="center" />
@@ -58,9 +58,8 @@
     <LinearLayout
     	android:id="@+id/second_overview_actions_container"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/recents_view_icon_size_width"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
         android:orientation="horizontal">
 
         <Space
@@ -72,8 +71,8 @@
         <Button
             android:id="@+id/action_screenshot"
             style="@style/OverviewActionButton"
-            android:layout_width="60dp"
-            android:layout_height="42dp"
+            android:layout_width="@dimen/recents_view_icon_size_width"
+            android:layout_height="@dimen/recents_view_icon_size_height"
             android:foreground="@drawable/ic_screenshot"
             android:layout_gravity="center_vertical"
             android:foregroundGravity="center" />
@@ -87,8 +86,8 @@
         <ImageButton
             android:id="@+id/action_lock"
             style="@style/OverviewActionButton"
-            android:layout_width="60dp"
-            android:layout_height="42dp"
+            android:layout_width="@dimen/recents_view_icon_size_width"
+            android:layout_height="@dimen/recents_view_icon_size_height"
             android:layout_gravity="center_vertical"
             android:foregroundGravity="center"
             android:visibility="gone" />
@@ -103,8 +102,8 @@
         <Button
             android:id="@+id/action_split"
             style="@style/OverviewActionButton"
-            android:layout_width="60dp"
-            android:layout_height="42dp"
+            android:layout_width="@dimen/recents_view_icon_size_width"
+            android:layout_height="@dimen/recents_view_icon_size_height"
             android:foreground="@drawable/ic_split_horizontal"
             android:layout_gravity="center_vertical"
             android:foregroundGravity="center"
@@ -120,8 +119,8 @@
         <Button
             android:id="@+id/action_lens"
             style="@style/OverviewActionButton"
-            android:layout_width="60dp"
-            android:layout_height="42dp"
+            android:layout_width="@dimen/recents_view_icon_size_width"
+            android:layout_height="@dimen/recents_view_icon_size_height"
             android:foreground="@drawable/ic_lens"
             android:layout_gravity="center_vertical"
             android:foregroundGravity="center" />
@@ -135,23 +134,8 @@
         <Button
             android:id="@+id/kill_app"
             style="@style/OverviewActionButton"
-            android:layout_width="60dp"
-            android:layout_height="42dp"
-            android:foreground="@drawable/ic_kill_app_recents"
-            android:layout_gravity="center_vertical"
-            android:foregroundGravity="center" />
-
-        <Space
-            android:id="@+id/kill_app_space"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/kill_app"
-            style="@style/OverviewActionButton"
-            android:layout_width="60dp"
-            android:layout_height="42dp"
+            android:layout_width="@dimen/recents_view_icon_size_width"
+            android:layout_height="@dimen/recents_view_icon_size_height"
             android:foreground="@drawable/ic_kill_app_recents"
             android:layout_gravity="center_vertical"
             android:foregroundGravity="center" />
