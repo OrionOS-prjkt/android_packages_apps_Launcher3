@@ -182,6 +182,7 @@ public class MemInfoView extends TextView {
             }
             String text = String.format(mMemInfoText, availResult, aproxRam.concat(" GB"));
             setText(text);
+            setTextColor(0xFFFFFFFF);
             mHandler.postDelayed(this, 1000);
         }
     }
